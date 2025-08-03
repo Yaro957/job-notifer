@@ -9,7 +9,7 @@ const bot = new Telegraf(process.env.BOT_TOKEN);
 bot.start((ctx) => ctx.reply("Welcome to the Job Notifier Bot!"));
 
 // Forward only text and timestamp to server
-bot.on("message", async (ctx) => {
+bot.on("text", async (ctx) => {
   const chatType = ctx.chat.type;
 
   if (chatType === "group" || chatType === "supergroup") {
