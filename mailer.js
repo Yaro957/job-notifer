@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
 });
 
 const sendNotificationMail = async (subject, obj) => {
-  const usertext = `${obj}`;
+const usertext = `🚨 New Off-Campus Job Alert!\n\n${obj}\n\nGood luck! 🚀`;
 
   const mailOptions = {
     from: `"Notifier Bot" <${process.env.EMAIL_USER}>`,
