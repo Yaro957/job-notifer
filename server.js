@@ -4,8 +4,8 @@ require('dotenv').config(); // Load .env variables at the top
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
-const connectDB = require("./sample/schema"); // your DB connection function
-const Message = require("./sample/main/models/message"); // your message schema file
+// const connectDB = require("./sample/schema"); // your DB connection function
+// const Message = require("./sample/main/models/message"); // your message schema file
 const bot = require("./bot"); // your Telegram bot setup
 const {sendNotificationMail}=require("./mailer")
 const app = express();
@@ -18,7 +18,7 @@ app.set("view engine", "ejs");
 app.set("views", __dirname);
 
 // Middleware
-app.use(bodyParser.json());
+app.use(bodyParser.json()); 
 app.use(express.urlencoded({ extended: true }));
     bot.launch();
 
