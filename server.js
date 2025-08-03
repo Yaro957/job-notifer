@@ -15,7 +15,7 @@ console.log("Starting server...");
 
 // View engine (optional)
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "main")); // folder: /main/index.ejs
+app.set("views", __dirname);
 
 // Middleware
 app.use(bodyParser.json());
@@ -23,9 +23,13 @@ app.use(express.urlencoded({ extended: true }));
     bot.launch();
 
 // Routes
-// app.get('/', async (req, res) => {
-//     res.render("index", { messages });
-// });
+app.get('/', async (req, res) => {
+    res.render("index");
+});
+app.listen(PORT, () => {
+  console.log(`🚀 Server running at http://localhost:${PORT}`);
+});
+
 
 // Route to receive bot data
 // app.post("/store-message", async (req, res) => {

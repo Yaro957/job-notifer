@@ -162,114 +162,82 @@
                 </div>
             </div>
 
-            <!-- Right side - Form -->
+            <!-- Right side - Info Card -->
             <div class="max-w-md w-full">
-            <!-- Header Section -->
-            <div class="text-center mb-8 animate-fade-in-up">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mb-4 animate-pulse-slow">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6"></path>
-                    </svg>
+                <!-- Header Section -->
+                <div class="text-center mb-8 animate-fade-in-up">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mb-4 animate-pulse-slow">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6"></path>
+                        </svg>
+                    </div>
+                    <h1 class="text-4xl font-bold text-white mb-2">Job Notifier</h1>
+                    <p class="text-white text-opacity-90 text-lg">Get notified about your dream job opportunities</p>
                 </div>
-                <h1 class="text-4xl font-bold text-white mb-2">Job Notifier</h1>
-                <p class="text-white text-opacity-90 text-lg">Get notified about your dream job opportunities</p>
-            </div>
 
-            <!-- Form Container -->
-            <div class="glass-effect rounded-2xl p-8 shadow-2xl animate-slide-in-right">
-                <form id="jobForm" class="space-y-6">
-                    <!-- Email Input -->
-                    <div class="space-y-2">
-                        <label for="email" class="block text-sm font-medium text-white">
-                            Email Address
-                        </label>
-                        <div class="relative">
-                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <svg class="h-5 w-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path>
-                                </svg>
-                            </div>
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email" 
-                                required 
-                                placeholder="your.email@example.com"
-                                class="w-full pl-10 pr-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 focus:border-transparent input-glow transition-all duration-300"
-                            />
+                <!-- Info Container -->
+                <div class="glass-effect rounded-2xl p-8 shadow-2xl animate-slide-in-right">
+                    <div class="text-center space-y-6">
+                        <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
                         </div>
+                        
+                        <div>
+                            <h2 class="text-2xl font-bold text-white mb-3">Frontend Showcase</h2>
+                            <p class="text-white text-opacity-80 text-base leading-relaxed">
+                                This is a demonstration of the Job Notifier frontend design. The platform helps engineering students discover job opportunities through personalized alerts and real-time notifications.
+                            </p>
+                        </div>
+
+                        <div class="bg-white bg-opacity-10 rounded-lg p-4 border border-white border-opacity-20">
+                            <h3 class="text-white font-semibold mb-2">Key Features:</h3>
+                            <ul class="text-white text-opacity-80 text-sm space-y-1 text-left">
+                                <li>• Branch-specific job filtering</li>
+                                <li>• Real-time email notifications</li>
+                                <li>• Modern, responsive design</li>
+                                <li>• Secure user data handling</li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact Button -->
+                        <button 
+                            onclick="sendEmail()"
+                            class="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 shadow-lg group"
+                        >
+                            <span class="flex items-center justify-center">
+                                <svg class="w-5 h-5 mr-2 group-hover:animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                Contact Developer
+                            </span>
+                        </button>
                     </div>
 
-                    <!-- Branch Selection -->
-                    <div class="space-y-2">
-                        <label for="branch" class="block text-sm font-medium text-white">
-                            Engineering Branch
-                        </label>
-                        <div class="relative">
-                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <svg class="h-5 w-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                    <!-- Additional Info -->
+                    <div class="mt-8 pt-6 border-t border-white border-opacity-20">
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div class="flex items-center text-white text-opacity-80">
+                                <svg class="w-4 h-4 mr-2 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                 </svg>
+                                Modern UI/UX
                             </div>
-                            <select 
-                                id="branch" 
-                                name="branch" 
-                                required
-                                class="w-full pl-10 pr-8 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 focus:border-transparent input-glow transition-all duration-300 appearance-none cursor-pointer"
-                            >
-                                <option value="" class="bg-gray-800">Select your branch</option>
-                                <option value="All" class="bg-gray-800">All Branches</option>
-                                <option value="Computer Science" class="bg-gray-800">Computer Science</option>
-                                <option value="Information Technology" class="bg-gray-800">Information Technology</option>
-                                <option value="Mechanical" class="bg-gray-800">Mechanical Engineering</option>
-                                <option value="Electrical" class="bg-gray-800">Electrical Engineering</option>
-                                <option value="Civil" class="bg-gray-800">Civil Engineering</option>
-                                <option value="Electronics & Telecommunication" class="bg-gray-800">Electronics & Telecommunication</option>
-                            </select>
-                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                                <svg class="h-5 w-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            <div class="flex items-center text-white text-opacity-80">
+                                <svg class="w-4 h-4 mr-2 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7"></path>
                                 </svg>
+                                Fast Performance
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <button 
-                        type="submit"
-                        class="w-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 backdrop-blur-sm border border-white border-opacity-30 group"
-                    >
-                        <span class="flex items-center justify-center">
-                            <svg class="w-5 h-5 mr-2 group-hover:animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5-5-5h5v-12"></path>
-                            </svg>
-                            Get Job Alerts
-                        </span>
-                    </button>
-                </form>
-
-                <!-- Features -->
-                <div class="mt-8 pt-6 border-t border-white border-opacity-20">
-                    <div class="grid grid-cols-2 gap-4 text-sm">
-                        <div class="flex items-center text-white text-opacity-80">
-                            <svg class="w-4 h-4 mr-2 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Instant Alerts
-                        </div>
-                        <div class="flex items-center text-white text-opacity-80">
-                            <svg class="w-4 h-4 mr-2 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-                            </svg>
-                            Secure & Private
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Footer -->
-            <div class="text-center mt-8 text-white text-opacity-60 text-sm animate-fade-in-up" style="animation-delay: 0.4s;">
-                <p>Join thousands of engineers finding their perfect job match</p>
+                <!-- Footer -->
+                <div class="text-center mt-8 text-white text-opacity-60 text-sm animate-fade-in-up" style="animation-delay: 0.4s;">
+                    <p>Built with modern web technologies for optimal user experience</p>
+                </div>
             </div>
         </div>
 
@@ -312,37 +280,25 @@
     </div>
 
     <script>
-        document.getElementById('jobForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+        // Email function
+        function sendEmail() {
+            const subject = encodeURIComponent("Job Notifier - Frontend Inquiry");
+            const body = encodeURIComponent("Hi,\n\nI visited your Job Notifier frontend showcase and would like to recive updates from the app about the off camus drive updates");
             
-            const email = document.getElementById('email').value;
-            const branch = document.getElementById('branch').value;
+            // Replace 'your.email@example.com' with your actual email
+            const emailAddress = "omjumde204@gmail.com";
             
-            if (email && branch) {
-                // Add loading state
-                const button = this.querySelector('button[type="submit"]');
-                const originalText = button.innerHTML;
-                button.innerHTML = '<span class="flex items-center justify-center"><svg class="animate-spin w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg>Registering...</span>';
-                button.disabled = true;
-                
-                // Simulate form submission
-                setTimeout(() => {
-                    alert(`Thank you! You'll receive job alerts for ${branch === 'All' ? 'all branches' : branch} at ${email}`);
-                    button.innerHTML = originalText;
-                    button.disabled = false;
-                    this.reset();
-                }, 2000);
-            }
-        });
+            window.location.href = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
+        }
 
         // Add some interactive animations
-        document.querySelectorAll('input, select').forEach(element => {
-            element.addEventListener('focus', function() {
-                this.parentElement.style.transform = 'scale(1.02)';
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05) translateY(-2px)';
             });
             
-            element.addEventListener('blur', function() {
-                this.parentElement.style.transform = 'scale(1)';
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) translateY(0)';
             });
         });
 
@@ -388,6 +344,16 @@
         document.querySelectorAll('.feature-item').forEach(item => {
             item.style.transform = 'translateX(-20px)';
         });
+
+        // Add scroll effect for better UX
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            
+            document.querySelectorAll('.animate-float-move, .animate-float-diagonal, .animate-float-circle').forEach((element, index) => {
+                element.style.transform += ` translateY(${rate * (index + 1) * 0.1}px)`;
+            });
+        });
     </script>
 </body>
-</html> 
+</html>

@@ -3,7 +3,7 @@ const nodemailer = require("nodemailer");
 
 // List of recipients (won't be visible to each other)
 const enails = [
-  "omjumde204@gmail.com",
+  "jumdeom302@gmail.com",
   "mohitmane916@gmail.com",
   "shamsarwade1818@gmail.com"
 ];
